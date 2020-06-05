@@ -9,6 +9,7 @@ class App extends Component {
   state = {
     users: [],
     loading: false,
+    alert: null,
   };
 
   // Search Github users
@@ -25,7 +26,10 @@ class App extends Component {
   // Clear users from state
   clearUsers = () => this.setState({ users: [], loading: false });
 
-  //
+  // Set Alert
+  setAlert = (msg, type) => {
+    this.setState({ alert: { msg: msg, type: type } });
+  };
 
   render() {
     const { users, loading } = this.state;

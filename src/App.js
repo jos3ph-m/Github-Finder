@@ -28,7 +28,7 @@ class App extends Component {
 
   // Set Alert
   setAlert = (msg, type) => {
-    this.setState({ alert: { msg: msg, type: type } });
+    this.setState({ alert: { msg, type } });
   };
 
   render() {
